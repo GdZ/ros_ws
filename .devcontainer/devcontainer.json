@@ -1,0 +1,59 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/ubuntu
+{
+	"name": "ros-melodic",
+	// "image": "mcr.microsoft.com/devcontainers/base:bionic",
+	"build": {
+		"context": ".",
+		"dockerfile": "Dockerfile"
+		// "cacheFrom": "ghcr.io/GdZ/ros_ws"
+	},
+	"features": {
+		"ghcr.io/rocker-org/devcontainer-features/miniforge:0": {}
+	},
+
+	"privileged": true,
+	"capAdd": ["SYS_PTRACE"],
+	"securityOpt": ["seccomp=unconfined"],
+
+	// Configure tool-specific properties.
+	"customizations": {
+		// Configure properties specific to VS Code.
+		"vscode": {
+			// Add the IDs of extensions you want installed when the container is created.
+			"extensions": [
+				"ms-vscode.cpptools",
+				"ms-vscode.cmake-tools",
+				"ms-iot.vscode-ros",
+				"pijar.ros-snippets",
+				"JaehyunShim.vscode-ros",
+				"sweilz.ros-snippets",
+				"zoneorz.ros-package-variable",
+				"Tacha-S.roslint",
+				"mischelebuha.cmake-extension-pack",
+				"tomoki1207.pdf",
+				"ms-vscode-remote.vscode-remote-extensionpack"
+			]
+		}
+	}
+
+	// "mounts": [
+	// 	{"source": "/Users/zz/working/apps-iigs/ros_ws", "target": "/workspaces/ros_ws", "type": "bind"}
+	// ]
+
+	// Features to add to the dev container. More info: https://containers.dev/features.
+	// "features": {},
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [],
+
+	// Use 'postCreateCommand' to run commands after the container is created.
+	// "postCreateCommand": "uname -a",
+	// "onCreateCommand": "/bin/sh ${containerWorkspaceFolder}/deploy.sh",
+
+	// Configure tool-specific properties.
+	// "customizations": {},
+
+	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+	// "remoteUser": "root"
+}

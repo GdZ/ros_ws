@@ -1,0 +1,12 @@
+{
+    "ros.distro": "melodic",
+    "python.linting.enabled": true,
+    "python.autoComplete.extraPaths": [
+        "/opt/ros/melodic/lib/python2.7/dist-packages",
+        "/workspaces/ros_ws/devel/lib/python2.7/dist-packages"
+    ],
+    "python.linting.pylintArgs": [
+        "--init-hook"
+    ],
+    "cmake.sourceDirectory": "${workspaceFolder}/src"
+}
